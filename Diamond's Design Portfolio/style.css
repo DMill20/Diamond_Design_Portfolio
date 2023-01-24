@@ -1,0 +1,577 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+/* variables*/
+li {
+  text-decoration: none;
+  list-style: none;
+  color: #fff;
+}
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/cheetah\ print.jpg");
+}
+.nav {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: hidden;
+}
+.menu a {
+  display: block;
+  padding: 30px;
+  color: #ffffff;
+}
+.menu a:hover {
+  background-color: var(--gray);
+}
+.menu li a {
+  font-size: 2rem;
+  font-weight: 700;
+}
+.nav {
+  max-height: 0;
+  transition: max-height 0.5s ease-out;
+}
+/* Logo */
+.logo {
+  display: inline-block;
+  color: var(--white);
+  font-size: 60px;
+  margin-left: 10px;
+}
+/* Menu Icon */
+.hamb {
+  cursor: pointer;
+  float: right;
+  padding: 40px 20px;
+} /* Style label tag */
+
+.hamb-line {
+  background: var(--white);
+  display: block;
+  height: 2px;
+  position: relative;
+  width: 24px;
+} /* Style span tag */
+
+.hamb-line::before,
+.hamb-line::after {
+  background: var(--white);
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  transition: all 0.2s ease-out;
+  width: 100%;
+}
+.hamb-line::before {
+  top: 5px;
+}
+.hamb-line::after {
+  top: -5px;
+}
+
+.side-menu {
+  display: none;
+} /* Hide checkbox */
+/* Toggle menu icon */
+.side-menu:checked ~ nav {
+  max-height: 100%;
+}
+.side-menu:checked ~ .hamb .hamb-line {
+  background: transparent;
+}
+.side-menu:checked ~ .hamb .hamb-line::before {
+  transform: rotate(-45deg);
+  top: 0;
+}
+.side-menu:checked ~ .hamb .hamb-line::after {
+  transform: rotate(45deg);
+  top: 0;
+}
+.row_container_1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: #000;
+  height: 20vh;
+}
+.row_container_2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/purge\ mask.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 60vh;
+}
+.row_container_3 {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("/cheetah\ print.jpg");
+  height: 20vh;
+  background: #000000;
+}
+.home_text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home_text h1 span {
+  color: #cc0000;
+}
+.home_text h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #ffffff;
+  padding: 8px;
+  font-size: 2rem;
+}
+.home_text h2 {
+  background-color: #cc0000;
+  font-size: 1.5rem;
+  color: #ffffff;
+  border-radius: 0.5rem;
+  font-weight: 400;
+  padding: 4px;
+}
+.home_text .images {
+  opacity: 0.7;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+button {
+  border: 2.5px solid #fff; /* Green */
+  border-radius: 0.5rem;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 700;
+  opacity: 0.5;
+  width: 200px;
+  height: 50px;
+  background: transparent;
+}
+.images {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.diamond_1,
+.diamond_2,
+.diamond_3 {
+  -webkit-animation: spin 6s linear infinite;
+  -moz-animation: spin 6s linear infinite;
+  animation: spin 6s linear infinite;
+}
+@-moz-keyframes spin {
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.button {
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  border: 2px solid red;
+}
+/*about section*/
+
+.about {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(204, 0, 0, 0.7), rgba(204, 0, 0, 0.7)),
+    url("/purge\ mask.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.about_text {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 16px;
+}
+.about_text h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  color: #ffffff;
+}
+.about_text p {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+.about_text_2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("cheetah\ print.jpg");
+  border-radius: 0.5rem;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 500px;
+}
+.projects {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #000000;
+}
+.card_1 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("cheetah\ print.jpg");
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid #cc0000;
+  border-radius: 0.5rem;
+}
+.card_2 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("cheetah\ print.jpg");
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid #cc0000;
+  border-radius: 0.5rem;
+}
+.card_3 {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url("cheetah\ print.jpg");
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+  border: 4px solid #cc0000;
+  border-radius: 0.5rem;
+}
+.card_image {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("purge\ mask.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 125px;
+}
+/* NEW MEDIA QUERIES*/
+@media (min-width: 768px) {
+  .header {
+    background: linear-gradient(rgba(204, 0, 0, 0.7), rgba(204, 0, 0, 0.7)),
+      url("/cheetah\ print.jpg");
+    box-shadow: 2px 2px 2px 2px #000;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background: #000;
+  }
+  .nav {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+  }
+  .menu a {
+    display: block;
+    padding: 30px;
+    color: #ffffff;
+  }
+  .menu a:hover {
+    background: transparent;
+  }
+  .menu li a {
+    font-size: 2rem;
+    font-weight: 700;
+  }
+  .nav {
+    max-height: 0;
+    transition: max-height 0.5s ease-out;
+  }
+  /* Logo */
+  .logo {
+    display: inline-block;
+    color: var(--white);
+    font-size: 60px;
+    margin-left: 10px;
+  }
+  /* Menu Icon */
+  .hamb {
+    cursor: pointer;
+    float: right;
+    padding: 40px 20px;
+  } /* Style label tag */
+
+  .hamb-line {
+    background: var(--white);
+    display: block;
+    height: 2px;
+    position: relative;
+    width: 24px;
+  } /* Style span tag */
+
+  .hamb-line::before,
+  .hamb-line::after {
+    background: var(--white);
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+  .hamb-line::before {
+    top: 5px;
+  }
+  .hamb-line::after {
+    top: -5px;
+  }
+
+  .side-menu {
+    display: none;
+  } /* Hide checkbox */
+  /* Toggle menu icon */
+  .side-menu:checked ~ nav {
+    max-height: 100%;
+  }
+  .side-menu:checked ~ .hamb .hamb-line {
+    background: transparent;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::before {
+    transform: rotate(-45deg);
+    top: 0;
+  }
+  .side-menu:checked ~ .hamb .hamb-line::after {
+    transform: rotate(45deg);
+    top: 0;
+  }
+  .row_container_1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("/cheetah\ print.jpg");
+    height: 17vh;
+  }
+  .row_container_2 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("/purge\ mask.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 60vh;
+  }
+  .row_container_3 {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("/cheetah\ print.jpg");
+    height: 20vh;
+  }
+  .home_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .home_text h1 span {
+    color: #cc0000;
+  }
+  .home_text h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    color: #ffffff;
+    padding: 8px;
+  }
+  .home_text h2 {
+    background-color: #cc0000;
+    font-size: 2.5rem;
+    color: #ffffff;
+    border-radius: 0.5rem;
+    font-weight: 400;
+    padding: 4px;
+    opacity: 0.5;
+  }
+  .home .images {
+    opacity: 0.7;
+  }
+  .btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  button {
+    border: 2.5px solid #fff; /* Green */
+    border-radius: 0.5rem;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.5;
+    width: 200px;
+    height: 50px;
+    background: transparent;
+  }
+  .images {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .diamond_1,
+  .diamond_2,
+  .diamond_3 {
+    -webkit-animation: spin 6s linear infinite;
+    -moz-animation: spin 6s linear infinite;
+    animation: spin 6s linear infinite;
+  }
+  @-moz-keyframes spin {
+    100% {
+      -moz-transform: rotate(360deg);
+    }
+  }
+  @-webkit-keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+    }
+  }
+  @keyframes spin {
+    100% {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+  }
+  .button {
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    border: 2px solid red;
+  }
+  /*about section*/
+
+  .about {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(204, 0, 0, 0.7), rgba(204, 0, 0, 0.7)),
+      url("/purge\ mask.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .about_text {
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+  }
+  .about_text h1 {
+    font-size: 2.5rem;
+    font-weight: 500;
+    color: #ffffff;
+  }
+  .about_text p {
+    font-size: 2rem;
+    font-weight: 400;
+  }
+  .about_text_2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("cheetah\ print.jpg");
+    border-radius: 0.5rem;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 500px;
+  }
+  .projects {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #000000;
+  }
+  .card_1 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("cheetah\ print.jpg");
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    border: 4px solid #cc0000;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+  }
+  .card_2 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("cheetah\ print.jpg");
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    border: 4px solid #cc0000;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+  }
+  .card_3 {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("cheetah\ print.jpg");
+    width: 400px;
+    height: 500px;
+    margin: 10px;
+    border: 4px solid #cc0000;
+    border-radius: 0.5rem;
+    opacity: 0.8;
+  }
+  .card_image {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+      url("purge\ mask.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 250px;
+  }
+}
